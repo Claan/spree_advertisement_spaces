@@ -2,4 +2,35 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      spree/ad:
+        title: Title
+        link: Link
+        image: Image
+        position: Position
+        size: Size
+        show_in_sidebar: Show in sidebar
+        show_in_homepage: Show in homepage 
+        taxon_id: Taxon
+        position_in_sidebar: Position in sidebar
+        position_in_homepage: Position in homepage
+        position_in_taxon: Position in taxon 
+    models:
+      spree/ad:
+        few: Ads
+        many: Ads
+        one: Ad
+        other: Ads
+  spree:
+    admin:
+      tab:
+        ads: Ads
+    back_to_ads_list: "Back to ads list"
+    ad: Ad 
+    ads: Ads
+    static_content:
+      ads: Ads 
+      new_ad: New Ad 
+      editing_ad: Editing Ad 
+      link: Link

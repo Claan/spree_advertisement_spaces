@@ -1,0 +1,55 @@
+<div data-hook="admin_block_form_fields">
+  <div class="left eight columns alpha" data-hook="admin_block_form_left">
+    <%= f.field_container :title do %>
+      <%= f.label :title %><br />
+      <%= f.text_field :title, :class => 'fullwidth title' %>
+      <%= f.error_message_on :title %>
+    <% end %>
+
+    <%= f.field_container :link do %>
+      <%= f.label :link %> <span class="required">*</span><br />
+      <%= f.text_field :link, :class => 'fullwidth title' %>
+      <%= f.error_message_on :link %>
+    <% end %>
+
+    <%= f.field_container :image do %>
+      <%= f.label :image %> <span class="required">*</span><br />
+      <%= f.file_field :image, :class => 'fullwidth title' %>
+      <%= f.error_message_on :image %>
+    <% end %>
+
+  </div>
+
+  <div class="right four columns omega" data-hook="admin_page_form_right">
+    <%= f.field_container :show_in_sidebar do %>
+      <%= f.check_box :show_in_sidebar %>
+      <%= f.label :show_in_sidebar %>
+    <% end %>
+
+    <%= f.field_container :position_in_sidebar do %>
+      <%= f.label :position_in_sidebar %><br />
+      <%= f.number_field :position_in_sidebar, min: 0, class: 'fullwidth title' %>
+    <% end %> 
+
+    <%= f.field_container :show_in_homepage do %>
+      <%= f.check_box :show_in_homepage %>
+      <%= f.label :show_in_homepage %>
+    <% end %>
+
+    <%= f.field_container :position_in_homepage do %>
+      <%= f.label :position_in_homepage %><br />
+      <%= f.number_field :position_in_homepage, min: 0, class: 'fullwidth title' %>
+    <% end %> 
+
+    <%= f.field_container :taxon_id do %>
+      <%= f.label :taxon_id %>
+      <%= f.collection_select :taxon_id, Spree::Taxon.all, :id, :name, prompt: 'Taxon' %>
+    <% end %>
+
+    <%= f.field_container :position_in_taxon do %>
+      <%= f.label :position_in_taxon %><br />
+      <%= f.number_field :position_in_taxon, min: 0, class: 'fullwidth title' %>
+    <% end %> 
+  </div>
+  <div class="clear"></div>
+</div>
