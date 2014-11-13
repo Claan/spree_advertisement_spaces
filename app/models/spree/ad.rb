@@ -7,4 +7,6 @@ class Spree::Ad < ActiveRecord::Base
      default_style: :large,
      url: "/assets/blocks/:id/:style/:basename.:extension",
      path: ":rails_root/public/assets/blocks/:id/:style/:basename.:extension"  
+
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 end
