@@ -1,3 +1,3 @@
-class Spree::Admin::BlocksController < Spree::Admin::ResourceController
+class Spree::Admin::AdsController < Spree::Admin::ResourceController
 
 end
