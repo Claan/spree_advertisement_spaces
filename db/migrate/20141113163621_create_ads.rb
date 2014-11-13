@@ -1,6 +1,6 @@
 class CreateAds < ActiveRecord::Migration
   def change
-    create_table :ads do |t|
+    create_table :spree_ads do |t|
       t.string :title
       t.attachment :image
       t.string :link
