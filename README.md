@@ -45,10 +45,10 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2014 [Nuno Polonia][5], released under the [MIT License][5]
+Copyright (c) 2014 [Claan][5], released under the [MIT License][5]
 
 [1]: https://github.com/Claan/spree_advertisement_spaces/blob/master/Versionfile
 [2]: http://www.fsf.org/licensing/essays/free-sw.html
 [3]: https://github.com/Claan/spree_advertisement_spaces/issues
-[4]: https://github.com/nunopolonia
+[4]: https://github.com/Claan
 [5]: https://github.com/Claan/spree_advertisement_spaces/blob/master/LICENSE.md
