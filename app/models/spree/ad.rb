@@ -3,6 +3,7 @@ class Spree::Ad < ActiveRecord::Base
 
   validates_presence_of :link
   validates_presence_of :image
+  validates_presence_of :size
 
   has_attached_file :image, 
      styles: {mini: '48x48#', normal: '200x200>', large: '600x600>'},
