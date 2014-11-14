@@ -28,4 +28,32 @@ class Spree::Ad < ActiveRecord::Base
 
     position
   end
+
+  # Update ads position using before_save sendback
+  before_save :update_positions
+
+  def update_positions
+    if self.show_in_sidebar?
+      update_type_of_position self, 'position_in_sidebar'
+    elsif self.show_in_homepage?
+      update_type_of_position self, 'position_in_homepage'
+    elsif self.taxon_id.present?
+      update_type_of_position self, 'position_in_taxon'
+    end
+
+    true
+  end
+
+  def update_type_of_position(object, field)
+    if new_record?
+      Spree::Ad.where("#{field} >= ?", object.field).update_all("#{field} = #{field} + 1")
+    else
+      return unless prev_position = Spree::Ad.find(object.id).send(field)
+      if prev_position > object.send(field)
+        Spree::Ad.where("? <= #{field} AND #{field} < ?", object.send(field), prev_position).update_all("#{field} = #{field} + 1")
+      elsif prev_position < object.send(field)
+        Spree::Ad.where("? < #{field} AND #{field} <= ?", prev_position, object.send(field)).update_all("#{field} = #{field} - 1")
+      end
+    end 
+  end
 end
