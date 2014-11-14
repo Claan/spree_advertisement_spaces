@@ -31,6 +31,9 @@ en:
     ads: Ads
     static_content:
       ads: Ads 
+      homepage_ads: Homepage Ads
+      sidebar_ads: Sidebar Ads
+      taxons_ads: Taxon ads
       new_ad: New Ad 
       editing_ad: Editing Ad 
       link: Link

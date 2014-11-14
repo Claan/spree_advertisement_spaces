@@ -1,0 +1,7 @@
+<% content_for :sub_menu do %>
+  <ul id="sub_nav" data-hook="admin_ad_sub_tabs" class="inline-menu">
+    <%= tab :homepage, url: spree.admin_ads_path(from: 'homepage') %>
+    <%= tab :sidebar, url: spree.admin_ads_path(from: 'sidebar') %>
+    <%= tab :taxons, url: spree.admin_ads_path(from: 'taxons')  %>
+  </ul>
+<% end %>
