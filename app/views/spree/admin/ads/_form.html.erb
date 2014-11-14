@@ -22,7 +22,7 @@
   <div class="right four columns omega" data-hook="admin_page_form_right">
     <%= f.field_container :size do %>
       <%= f.label :size%> <span class="required">*</span><br />
-      <%= f.select :size, options_for_select([['small'],['medium'],['large']]), class: 'fullwidth title' %>
+      <%= f.select :size, options_for_select([['small','small'],['medium','medium'],['large','large']], selected: f.object.size), class: 'fullwidth title' %>
       <%= f.error_message_on :size %>
     <% end %>
 
