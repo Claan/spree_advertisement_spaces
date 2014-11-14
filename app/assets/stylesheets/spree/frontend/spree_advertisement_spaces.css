@@ -1,4 +1,33 @@
-/*
-Placeholder manifest file.
-the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
-*/
+.ad-block {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.ad-block:hover {
+  text-decoration: none;
+}
+
+.ad-block img {
+  width: 100%;
+}
+
+.ad-block p {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.homepage-ads {
+  overflow: auto;
+  clear: both;
+}
+
+.sidebar-ads {
+  margin-top: 30px; 
+}
+
+.sidebar-ads .ad-block {
+  width: 100%;
+}
