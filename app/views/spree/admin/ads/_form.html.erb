@@ -17,10 +17,15 @@
       <%= f.file_field :image, :class => 'fullwidth title' %>
       <%= f.error_message_on :image %>
     <% end %>
-
   </div>
 
   <div class="right four columns omega" data-hook="admin_page_form_right">
+    <%= f.field_container :size do %>
+      <%= f.label :size%> <span class="required">*</span><br />
+      <%= f.select :size, options_for_select([['small'],['medium'],['large']]), class: 'fullwidth title' %>
+      <%= f.error_message_on :size %>
+    <% end %>
+
     <%= f.field_container :show_in_sidebar do %>
       <%= f.check_box :show_in_sidebar %>
       <%= f.label :show_in_sidebar %>
