@@ -1,4 +1,6 @@
 class Spree::Ad < ActiveRecord::Base
+  belongs_to :taxon
+
   validates_presence_of :link
   validates_presence_of :image
 
