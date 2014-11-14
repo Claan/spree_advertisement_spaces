@@ -1,14 +1,16 @@
 <table class="index responsive" id="listing_ads" data-hook>
   <colgroup>
     <col style="width: 5%">
+    <col style="width: 5%">
     <col style="width: 40%">
     <col style="width: 10%">
-    <col style="width: 30%">
+    <col style="width: 25%">
     <col style="width: 15%">
   </colgroup>
   <thead>
     <tr data-hook="admin_ads_index_headers">
       <th><%= Spree::Ad.human_attribute_name(:position) %></th>
+      <th><%= Spree::Ad.human_attribute_name(:size) %></th>
       <th><%= Spree::Ad.human_attribute_name(:title) %></th>
       <th><%= Spree::Ad.human_attribute_name(:image) %></th>
       <th><%= Spree.t("static_content.link") %></th>
@@ -21,6 +23,9 @@
       <tr data-hook="admin_ads_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id ad %>">
         <td>
           <%= ad.position %>
+        </td>
+        <td>
+          <%= ad.size %>
         </td>
         <td>
           <%= ad.title %>
