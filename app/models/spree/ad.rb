@@ -46,9 +46,9 @@ class Spree::Ad < ActiveRecord::Base
 
   def update_type_of_position(object, field)
     if new_record?
-      Spree::Ad.where("#{field} >= ?", object.field).update_all("#{field} = #{field} + 1")
+      Spree::Ad.where("#{field} >= ?", object.send(field) ).update_all("#{field} = #{field} + 1")
     else
-      return unless prev_position = Spree::Ad.find(object.id).send(field)
+      return unless ( prev_position = Spree::Ad.find(object.id).send(field) )
       if prev_position > object.send(field)
         Spree::Ad.where("? <= #{field} AND #{field} < ?", object.send(field), prev_position).update_all("#{field} = #{field} + 1")
       elsif prev_position < object.send(field)
