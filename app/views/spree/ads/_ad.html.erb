@@ -1,4 +1,4 @@
 <%= link_to ad.link, class: "ad-block #{'col-md-3' if ad.size == 'small'} #{'col-md-6' if ad.size == 'medium'} #{'col-md-12' if ad.size == 'large'}" do %>
-  <%= image_tag ad.image.url %>
+  <%= image_tag ad.image.url(:original) %>
   <p><%= ad.title %></p>
 <% end %>
